@@ -5,38 +5,76 @@
   --foreground: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
-}
-
-* {
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background:
-    radial-gradient(circle at top, rgba(250, 204, 21, 0.08), transparent 35%),
-    radial-gradient(circle at bottom right, rgba(250, 204, 21, 0.06), transparent 30%),
-    #020409;
-
-  color: white;
-
-  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
-
-  background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-
-  background-size: 80px 80px;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
+
+/* Premium Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #05070d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    rgba(250, 204, 21, 0.8),
+    rgba(202, 138, 4, 0.9)
+  );
+  border-radius: 999px;
+  border: 2px solid #05070d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(253, 224, 71, 1),
+    rgba(234, 179, 8, 1)
+  );
+}
+
+/* Smooth Selection */
 
 ::selection {
   background: rgba(250, 204, 21, 0.3);
   color: white;
+}
+
+/* Premium Glow Helpers */
+
+.gold-glow {
+  box-shadow:
+    0 0 25px rgba(250, 204, 21, 0.12),
+    0 0 60px rgba(250, 204, 21, 0.08);
+}
+
+/* Subtle Fade Animation */
+
+@keyframes softFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.soft-float {
+  animation: softFloat 6s ease-in-out infinite;
 }
