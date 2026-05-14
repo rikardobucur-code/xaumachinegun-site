@@ -762,6 +762,10 @@ export default function Home() {
               Risk Disclaimer
             </a>
 
+            <a href="/terms-of-use" className="hover:text-yellow-400">
+              Terms of Use
+            </a>
+
             <a
               href={telegramUrl}
               target="_blank"
