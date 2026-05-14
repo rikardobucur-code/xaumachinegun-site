@@ -114,6 +114,29 @@ const faqs = [
   },
 ];
 
+const accessSteps = [
+  {
+    step: "01",
+    title: "Join Telegram",
+    text: "All onboarding and access requests are handled through the official XAUMachineGUN Telegram channel.",
+  },
+  {
+    step: "02",
+    title: "Request Access",
+    text: "Send your MT5 account type, broker, VPS setup and previous trading experience for review.",
+  },
+  {
+    step: "03",
+    title: "Manual Approval",
+    text: "Accounts are manually reviewed before activation. Not all requests are accepted.",
+  },
+  {
+    step: "04",
+    title: "Account Lock Activation",
+    text: "The EA will later be linked to approved MT5 account numbers for controlled distribution.",
+  },
+];
+
 const fadeUp = {
   initial: { opacity: 0, y: 35 },
   whileInView: { opacity: 1, y: 0 },
@@ -152,6 +175,9 @@ export default function Home() {
             </a>
             <a href="#presets" className="hover:text-yellow-400">
               Presets
+            </a>
+            <a href="#how-access-works" className="hover:text-yellow-400">
+              Access
             </a>
             <a href="#faq" className="hover:text-yellow-400">
               FAQ
@@ -200,9 +226,7 @@ export default function Home() {
 
             <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap sm:gap-4 md:mt-10">
               <a
-                href={telegramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#how-access-works"
                 className="rounded-full bg-yellow-400 px-7 py-4 text-center font-black text-black shadow-2xl shadow-yellow-500/20 transition-all duration-300 hover:scale-105 hover:bg-yellow-300"
               >
                 Request Access
@@ -675,6 +699,116 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </motion.section>
+
+      <motion.section
+        {...fadeUp}
+        id="how-access-works"
+        className="relative z-10 border-y border-white/10 bg-white/[0.03] px-4 py-20 sm:px-6 md:py-24"
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-12">
+            <div>
+              <div className="inline-flex rounded-full border border-yellow-400/20 bg-yellow-400/10 px-3 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-yellow-400 sm:px-4 sm:text-xs sm:tracking-[0.3em]">
+                Controlled Access Workflow
+              </div>
+
+              <h2 className="mt-6 text-3xl font-black sm:text-4xl md:text-6xl">
+                How Access Works
+              </h2>
+
+              <p className="mt-5 text-base leading-8 text-gray-400 sm:text-lg md:mt-6">
+                XAUMachineGUN is not distributed through automated checkout
+                systems or mass-market funnels. Access is handled manually in
+                order to keep deployment controlled, maintain infrastructure
+                quality and reduce irresponsible usage.
+              </p>
+
+              <div className="mt-8 rounded-[1.5rem] border border-red-400/20 bg-red-400/10 p-5 sm:rounded-[2rem]">
+                <div className="text-xs font-black uppercase tracking-[0.25em] text-red-300">
+                  Important
+                </div>
+                <p className="mt-3 text-sm leading-7 text-gray-300">
+                  XAUMachineGUN is a high-risk XAUUSD recovery system designed
+                  for experienced users who understand drawdown, leverage
+                  exposure and supervised execution environments.
+                </p>
+              </div>
+
+              <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap sm:gap-4">
+                <a
+                  href={telegramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex justify-center rounded-full bg-yellow-400 px-7 py-4 font-black text-black shadow-2xl shadow-yellow-500/20 transition-all duration-300 hover:scale-105 hover:bg-yellow-300"
+                >
+                  Request Access on Telegram
+                </a>
+
+                <a
+                  href={myfxbookUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex justify-center rounded-full border border-white/15 bg-white/[0.04] px-7 py-4 font-black text-white transition-all duration-300 hover:scale-105 hover:border-yellow-400/40 hover:bg-yellow-400/10"
+                >
+                  Check Live Results First
+                </a>
+              </div>
+            </div>
+
+            <div className="grid gap-5">
+              {accessSteps.map((item) => (
+                <div
+                  key={item.step}
+                  className="rounded-[2rem] border border-yellow-400/15 bg-black/50 p-6 transition-all duration-300 hover:-translate-y-2 hover:border-yellow-400/40 sm:p-8"
+                >
+                  <div className="flex items-center gap-5">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-yellow-400/10 text-2xl font-black text-yellow-400">
+                      {item.step}
+                    </div>
+
+                    <div className="text-2xl font-black text-white">
+                      {item.title}
+                    </div>
+                  </div>
+
+                  <p className="mt-6 leading-8 text-gray-400">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 rounded-[2rem] border border-white/10 bg-black/40 p-6 sm:p-8 md:p-10">
+            <div className="grid gap-6 md:grid-cols-3">
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <div className="text-xs uppercase tracking-[0.25em] text-gray-500">
+                  Recommended VPS
+                </div>
+                <div className="mt-3 text-lg font-black text-yellow-400">
+                  Low Latency / 24-7 Stable
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <div className="text-xs uppercase tracking-[0.25em] text-gray-500">
+                  Recommended Broker
+                </div>
+                <div className="mt-3 text-lg font-black text-yellow-400">
+                  Raw Spread / High Leverage
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <div className="text-xs uppercase tracking-[0.25em] text-gray-500">
+                  Platform
+                </div>
+                <div className="mt-3 text-lg font-black text-yellow-400">
+                  MetaTrader 5
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </motion.section>
