@@ -10,7 +10,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://xaumachinegun.vercel.app"),
-  title: "XAUMachineGUN | Advanced XAUUSD Basket Recovery EA",
+  title: "XAUMachineGUN | Advanced XAUUSD Recovery Infrastructure",
   description:
     "Premium MetaTrader 5 Expert Advisor for supervised XAUUSD basket recovery trading, adaptive volatility protection and structured risk control.",
   keywords: [
@@ -24,25 +24,28 @@ export const metadata: Metadata = {
     "iamrika",
   ],
   openGraph: {
-    title: "XAUMachineGUN | Advanced XAUUSD Basket Recovery EA",
+    title: "XAUMachineGUN | Advanced XAUUSD Recovery Infrastructure",
     description:
       "Premium MetaTrader 5 Expert Advisor engineered for supervised XAUUSD basket recovery trading and adaptive volatility protection.",
+    url: "https://xaumachinegun.vercel.app",
+    siteName: "XAUMachineGUN",
     images: [
       {
-        url: "/logo.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "XAUMachineGUN by iamrika",
+        alt: "XAUMachineGUN Advanced XAUUSD Recovery Infrastructure",
       },
     ],
+    locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "XAUMachineGUN | Advanced XAUUSD Basket Recovery EA",
+    title: "XAUMachineGUN | Advanced XAUUSD Recovery Infrastructure",
     description:
       "Advanced MetaTrader 5 Expert Advisor for supervised XAUUSD basket recovery trading.",
-    images: ["/logo.png"],
+    images: ["/og-image.png"],
   },
   icons: {
     icon: "/icon.png",
