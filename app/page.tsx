@@ -757,7 +757,11 @@ export default function Home() {
             performance does not guarantee future results.
           </div>
 
-          <div className="flex gap-5">
+          <div className="flex flex-wrap gap-5">
+            <a href="/risk-disclaimer" className="hover:text-yellow-400">
+              Risk Disclaimer
+            </a>
+
             <a
               href={telegramUrl}
               target="_blank"
