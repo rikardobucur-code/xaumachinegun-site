@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const myfxbookUrl =
-  "https://www.myfxbook.com/portfolio/xaumachinegun-by-iamrika/12041054";
+  "https://www.myfxbook.com/portfolio/xaumachinegun-by-iamrika/12043338";
 
 const telegramUrl = "https://t.me/XAUMachineGUN";
 
